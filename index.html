@@ -3,101 +3,61 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>UGME Student Evaluation Portal</title>
 <style>
-:root {
-  font-family: Arial, sans-serif;
-  color: #17372f;
-  background: #f5f8f7;
-}
-* { box-sizing: border-box; }
-body { margin: 0; display: flex; min-height: 100vh; }
-.sidebar {
-  width: 260px; background: #103f35; color: white;
-  padding: 25px 16px; flex-shrink: 0;
-}
-.brand { font-size: 25px; font-weight: bold; margin: 5px 10px 35px; }
-.brand small {
-  display: block; font-size: 12px; font-weight: normal;
-  color: #c5e0d7; margin-top: 10px;
-}
-.nav {
-  width: 100%; display: block; padding: 15px;
-  margin-bottom: 8px; background: transparent;
-  border: 0; border-radius: 10px; color: white;
-  text-align: left; cursor: pointer; font-size: 15px;
-}
-.nav.active, .nav:hover { background: #286b5c; }
-.foot { margin-top: 50px; color: #b7d4ca; font-size: 11px; line-height: 1.6; }
-main { flex: 1; padding: 30px; min-width: 0; }
-header {
-  display: flex; justify-content: space-between;
-  align-items: center; gap: 15px; margin-bottom: 25px;
-}
-h1 { margin: 8px 0; font-size: 27px; }
-h2 { font-size: 19px; margin: 0 0 18px; }
-h3 { font-size: 16px; }
-.eyebrow { font-size: 11px; letter-spacing: 1.5px; color: #588076; font-weight: bold; }
-.muted { color: #71857e; font-size: 13px; line-height: 1.5; }
-.pill, .tag {
-  background: #dff0e9; color: #176452;
-  padding: 8px 12px; border-radius: 25px; font-size: 12px;
-}
-.card {
-  background: white; border: 1px solid #e0eae5;
-  border-radius: 14px; padding: 23px; margin-bottom: 18px;
-  box-shadow: 0 3px 10px #123d3010;
-}
-.grid, .fields, .management-grid {
-  display: grid; gap: 14px;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-}
-.metric { font-size: 29px; font-weight: bold; margin-top: 8px; }
-label { display: block; font-size: 13px; font-weight: bold; margin: 12px 0 6px; }
-input, select, textarea {
-  width: 100%; padding: 11px; border: 1px solid #cbdcd4;
-  border-radius: 8px; background: white; font: inherit; color: #17372f;
-}
-input[type="checkbox"] { width: auto; accent-color: #087f6b; }
-textarea { min-height: 90px; }
-.btn {
-  background: #087f6b; color: white; border: 0;
-  border-radius: 8px; padding: 11px 16px;
-  cursor: pointer; margin: 9px 5px 9px 0;
-}
-.btn:hover { background: #086453; }
-.secondary { background: #e5f0eb; color: #145846; }
-.danger { background: #fbe6e3; color: #a33126; }
-.tool-card {
-  background: #f1f8f5; border: 1px solid #d8e8e1;
-  border-radius: 12px; padding: 22px; text-align: left;
-  font-weight: bold; color: #103f35; cursor: pointer;
-}
-.tool-card:hover { background: #dcefe8; }
-.notice {
-  background: #fff6dd; color: #745b1d;
-  padding: 14px; border-radius: 10px;
-  font-size: 13px; margin-bottom: 18px;
-}
-.tablewrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-th, td { padding: 12px; border-bottom: 1px solid #e8efeb; text-align: left; }
-th { background: #f4f9f6; color: #426e61; }
-.checks {
-  max-height: 230px; overflow-y: auto;
-  border: 1px solid #e0eae5; border-radius: 10px; padding: 10px;
-}
-.checks label {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: normal; padding: 7px; margin: 0;
-}
-@media(max-width: 750px) {
-  body { display: block; }
-  .sidebar { width: 100%; }
-  main { padding: 18px; }
-  header { display: block; }
-}
+:root{font-family:Arial,sans-serif;color:#183d33;background:#f5f8f7}
+*{box-sizing:border-box}
+body{margin:0;display:flex;min-height:100vh}
+.sidebar{width:260px;flex-shrink:0;background:#103f35;color:white;padding:26px 16px}
+.brand{font-size:25px;font-weight:800;padding:4px 10px 30px}
+.brand small{display:block;font-size:12px;font-weight:400;color:#b9d8ce;margin-top:9px}
+.nav{display:block;width:100%;padding:15px;margin:5px 0;background:transparent;border:0;border-radius:10px;color:white;text-align:left;font-size:14px;cursor:pointer}
+.nav:hover,.nav.active{background:#286b5c}
+.foot{font-size:11px;color:#bdd6cd;line-height:1.6;margin:50px 10px 0}
+main{flex:1;min-width:0;padding:30px;max-width:1600px}
+header{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}
+h1{font-size:27px;margin:7px 0}
+h2{font-size:19px;margin:0 0 15px}
+h3{font-size:16px;margin:18px 0 12px}
+.eyebrow{font-size:11px;letter-spacing:1.5px;font-weight:bold;color:#66897e}
+.muted{font-size:13px;color:#71857e;line-height:1.6}
+.card{background:white;border:1px solid #e0eae5;border-radius:14px;padding:22px;margin-bottom:18px;box-shadow:0 3px 12px #173d3010}
+.grid,.fields,.management-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.assignment-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(270px,1fr);gap:18px;align-items:start}
+.metric{font-size:29px;font-weight:bold;margin-top:7px}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:11px;border:1px solid #cbdcd4;border-radius:9px;background:white;color:#17372f;font:inherit}
+textarea{min-height:90px}
+input[type=checkbox]{width:18px;height:18px;accent-color:#087f6b;flex-shrink:0}
+.btn{background:#087f6b;color:white;border:0;border-radius:9px;padding:12px 17px;cursor:pointer;font-weight:600;margin:9px 5px 9px 0}
+.btn:hover{background:#086453}
+.btn.secondary{background:#e6f0ec;color:#145846}
+.btn.danger{background:#fce9e6;color:#a33126}
+.tool-card{background:#f1f8f5;border:1px solid #d8e8e1;border-radius:12px;padding:23px;text-align:left;font-size:15px;font-weight:600;color:#103f35;cursor:pointer}
+.tool-card:hover{background:#dcefe8}
+.pill,.tag{display:inline-block;background:#e1f2ea;color:#176452;border-radius:25px;padding:8px 12px;font-size:12px}
+.notice{background:#fff6df;color:#775e24;padding:14px;border-radius:10px;font-size:13px;margin-bottom:18px;line-height:1.6}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:12px;border-bottom:1px solid #e8efeb;text-align:left;vertical-align:top}
+th{background:#f4f9f6;color:#426e61}
+.checks{border:1px solid #e0eae5;border-radius:10px;max-height:300px;overflow:auto}
+.check-row{display:flex;gap:12px;align-items:center;padding:12px;border-bottom:1px solid #edf2ef;cursor:pointer;margin:0;font-weight:normal}
+.check-row:hover{background:#f1f8f5}
+.check-row strong{display:block;font-size:14px}
+.check-row small{display:block;color:#71857e;margin-top:4px}
+.summary{background:#f1f8f5;border-radius:12px;padding:18px}
+.summary-line{display:flex;justify-content:space-between;gap:10px;padding:9px 0;font-size:13px}
+.summary-line strong{text-align:right}
+.section-label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#638579;font-weight:bold;margin:22px 0 10px}
+.rating-row{padding:15px 0;border-bottom:1px solid #e9f0eb}
+.rating-row label{margin-top:0}
+.rating-options{display:flex;flex-wrap:wrap;gap:8px}
+.rating-option{display:inline-flex;align-items:center;gap:6px;border:1px solid #d7e5de;border-radius:8px;padding:9px 11px;cursor:pointer;font-weight:normal;margin:0}
+.rating-option input{width:auto}
+@media(max-width:1050px){.assignment-layout{grid-template-columns:1fr}}
+@media(max-width:750px){body{display:block}.sidebar{width:100%}main{padding:18px}header{display:block}.fields{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -107,966 +67,956 @@ th { background: #f4f9f6; color: #426e61; }
     UGME <span style="color:#8ddbc7">Portal</span>
     <small>Student Evaluation Management</small>
   </div>
-  <button class="nav active" data-page="student">Student Portal</button>
-  <button class="nav" data-page="department">Department Admin</button>
-  <button class="nav" data-page="technical">UGME Technical Admin</button>
+  <button class="nav active" data-page="student">🎓 Student Portal</button>
+  <button class="nav" data-page="department">📋 Department Admin</button>
+  <button class="nav" data-page="technical">⚙ UGME Technical Admin</button>
   <div class="foot">
-    DEMO ONLY — Fictional records. Browser-local storage.
-    No secure authentication or access restrictions.
+    PROTOTYPE ONLY<br>
+    Fictional records and browser-local storage.<br>
+    No real authentication or access restrictions.
   </div>
 </aside>
 
 <main>
-  <header>
-    <div>
-      <div class="eyebrow">OFFICE OF UNDERGRADUATE MEDICAL EDUCATION</div>
-      <h1 id="heading">Student Dashboard</h1>
-      <p class="muted" id="subtitle">UGME Student Evaluation Portal</p>
-    </div>
-    <span class="pill">Prototype · 2026–27</span>
-  </header>
-  <div id="content"></div>
+<header>
+  <div>
+    <div class="eyebrow">OFFICE OF UNDERGRADUATE MEDICAL EDUCATION</div>
+    <h1 id="heading">Student Dashboard</h1>
+    <p class="muted" id="subtitle">UGME Student Evaluation Portal</p>
+  </div>
+  <span class="pill">Prototype · 2026–27</span>
+</header>
+<div id="content"></div>
 </main>
 
 <script>
 "use strict";
 
-/* DATA */
+const KEY="ugme_demo_v3";
+const YEARS=["Year 3","Year 4","Year 5"];
 
-const KEY = "ugme_demo_v2";
-
-const YEARS = ["Year 3", "Year 4", "Year 5"];
-
-const DEFAULT_ROTATIONS = {
-  "Year 3": [
-    "General Surgery", "ENT", "Eye",
-    "Family Medicine", "General Medicine", "MNCH"
-  ],
-  "Year 4": [
-    "Anaesthesia", "Dermatology", "Endocrinology",
-    "Hospital Paediatrics",
-    "Hospital Paediatrics (General Inpatient - verify name)",
-    "Hospital Paediatrics (General Outpatient - verify name)",
-    "Infectious Diseases and Microbiology",
-    "Neonatology", "Obstetric and Gynaecology",
-    "Paediatric Neurology", "Psychiatry", "Pulmonology",
-    "Selective & Electives", "Specialty Surgery"
-  ],
-  "Year 5": [
-    "Breast Surgery", "Electives", "Family Medicine",
-    "General Surgery", "Medicine", "Urology"
-  ]
+const TYPES={
+  faculty:"Faculty Evaluation by Students",
+  rotation:"End of Rotation Evaluation",
+  teaching:"End of Teaching Activity Evaluation",
+  cbil:"CBIL Evaluation"
 };
 
-const TYPES = {
-  faculty: "Faculty Evaluation by Student",
-  rotation: "End of Rotation Evaluation",
-  teaching: "Evaluation of Teaching Activity",
-  cbil: "CBIL Evaluation"
+const ROTATIONS={
+ "Year 3":[
+  "General Surgery","ENT","Eye","Family Medicine",
+  "General Medicine","MNCH"
+ ],
+ "Year 4":[
+  "Anaesthesia","Dermatology","Endocrinology",
+  "Hospital Paediatrics",
+  "Hospital Paediatrics (General Inpatient - verify name)",
+  "Hospital Paediatrics (General Outpatient - verify name)",
+  "Infectious Diseases and Microbiology",
+  "Neonatology","Obstetric and Gynaecology",
+  "Paediatric Neurology","Psychiatry","Pulmonology",
+  "Selective & Electives","Specialty Surgery"
+ ],
+ "Year 5":[
+  "Breast Surgery","Electives","Family Medicine",
+  "General Surgery","Medicine","Urology"
+ ]
 };
 
-const DEFAULT_QUESTIONS = {
-  faculty: [
+const FORMS={
+ faculty:{
+  scale:["Poor","Fair","Good","Very Good","Excellent"],
+  values:[2,3,4,5,6],
+  sections:[
+   {title:"Faculty Evaluation",questions:[
     "Facilitates learning",
     "Provides useful feedback",
+    "Engages students as part of the health care team",
+    "Holds students accountable",
     "Demonstrates professionalism",
+    "Is an effective role model",
     "Overall effectiveness as a teacher"
+   ]}
   ],
-  rotation: [
-    "The rotation met its learning objectives",
-    "Clinical learning opportunities were appropriate",
-    "Overall rotation experience"
+  comments:["Additional Comments"]
+ },
+ rotation:{
+  scale:["Strongly disagree","Disagree","Neutral","Agree","Strongly agree"],
+  values:[1,2,3,4,5],
+  sections:[
+   {title:"Students' Perception of Learning",questions:[
+    "The rotation objectives were clear",
+    "The learning tasks were relevant to the objectives",
+    "Small-group learning was effective",
+    "I was encouraged to participate actively",
+    "The rotation provided an appropriate level of challenge",
+    "The rotation helped develop my problem-solving skills",
+    "I had opportunities to apply theoretical knowledge"
+   ]},
+   {title:"Students' Perception of Teachers / Facilitators",questions:[
+    "The rotation coordinator was accessible",
+    "Faculty members were well prepared",
+    "Faculty members were approachable and provided feedback"
+   ]},
+   {title:"Perception of Admin Staff",questions:[
+    "Administrative staff communicated effectively",
+    "The rotation was coordinated effectively"
+   ]},
+   {title:"Perception of Learning Environment",questions:[
+    "The physical learning environment was appropriate",
+    "There were adequate opportunities for patient interaction",
+    "I felt included as part of the clinical team",
+    "The rotation motivated me to learn more about this field"
+   ]}
   ],
-  teaching: [
-    "The teaching activity was well organized",
-    "The activity supported my learning",
-    "Overall effectiveness of the activity"
+  comments:["Strengths of this rotation","Suggestions for improvement"]
+ },
+ teaching:{
+  scale:["Unsatisfactory","Satisfactory","Excellent"],
+  values:[1,2,3],
+  sections:[
+   {title:"Overall Evaluation of Teaching Activity",questions:[
+    "Overall rating of the session",
+    "Ability of the facilitator to engage the class",
+    "Ability of the facilitator to effectively deliver the content"
+   ]},
+   {title:"Evaluation of Learning Resources",questions:[
+    "If applicable, appropriate pre-reading material was provided"
+   ]}
   ],
-  cbil: [
-    "CBIL objectives were clear",
-    "The activity supported collaborative learning",
-    "Overall CBIL experience"
-  ]
+  comments:["Suggestions for improvement"]
+ },
+ cbil:{
+  scale:["Unsatisfactory","Fair","Satisfactory","Good","Very Good","Excellent","Outstanding"],
+  values:[1,2,3,4,5,6,7],
+  sections:[
+   {title:"Evaluation of Facilitator",questions:[
+    "Promotes an environment conducive to learning",
+    "Helps students manage group function",
+    "Gives constructive feedback to students",
+    "Assists group in identifying misconceptions or learning deficiencies",
+    "Rate the overall facilitation skills"
+   ]},
+   {title:"Evaluation of Learning Resources",questions:[
+    "If applicable, appropriate pre-reading material was provided",
+    "Pre/Post tests were relevant in clarifying my concepts"
+   ]}
+  ],
+  comments:["Any other comments"]
+ }
 };
 
-const DEFAULTS = {
-  rotations: DEFAULT_ROTATIONS,
-  questions: DEFAULT_QUESTIONS,
-  students: [
-    { id: "DEMO001", name: "Student A", email: "", year: "Year 3", group: "A", subgroup: "A1" },
-    { id: "DEMO002", name: "Student B", email: "", year: "Year 4", group: "B", subgroup: "B1" },
-    { id: "DEMO003", name: "Student C", email: "", year: "Year 5", group: "C", subgroup: "C1" }
-  ],
-  faculty: [
-    {
-      id: "F001", name: "Faculty Member A", department: "General Medicine",
-      mappings: [{year:"Year 3", rotation:"General Medicine"}]
-    },
-    {
-      id: "F002", name: "Faculty Member B", department: "General Surgery",
-      mappings: [
-        {year:"Year 3", rotation:"General Surgery"},
-        {year:"Year 5", rotation:"General Surgery"}
-      ]
-    },
-    {
-      id: "F003", name: "Faculty Member C", department: "Family Medicine",
-      mappings: [
-        {year:"Year 3", rotation:"Family Medicine"},
-        {year:"Year 5", rotation:"Family Medicine"}
-      ]
-    }
-  ],
-  admins: [],
-  assignments: [],
-  responses: []
+/*
+ Questionnaire wording is provisional in this prototype.
+ Confirm exact VLE wording and N/A behavior before production.
+*/
+
+const DEFAULTS={
+ rotations:ROTATIONS,
+ forms:FORMS,
+ students:[
+  {id:"DEMO001",name:"Student A",email:"",year:"Year 3"},
+  {id:"DEMO002",name:"Student B",email:"",year:"Year 3"},
+  {id:"DEMO003",name:"Student C",email:"",year:"Year 4"},
+  {id:"DEMO004",name:"Student D",email:"",year:"Year 5"}
+ ],
+ faculty:[
+  {id:"F001",name:"Faculty Member A",department:"General Medicine",
+   mappings:[{year:"Year 3",rotation:"General Medicine"}]},
+  {id:"F002",name:"Faculty Member B",department:"General Surgery",
+   mappings:[{year:"Year 3",rotation:"General Surgery"},{year:"Year 5",rotation:"General Surgery"}]},
+  {id:"F003",name:"Faculty Member C",department:"Family Medicine",
+   mappings:[{year:"Year 3",rotation:"Family Medicine"},{year:"Year 5",rotation:"Family Medicine"}]}
+ ],
+ admins:[],
+ assignments:[],
+ responses:[]
 };
 
-let saved = {};
-try {
-  saved = JSON.parse(localStorage.getItem(KEY)) || {};
-} catch {}
+let saved={};
+try{saved=JSON.parse(localStorage.getItem(KEY))||{}}catch{}
+let db=structuredClone(DEFAULTS);
+for(const k of Object.keys(DEFAULTS)){
+ if(saved[k]!==undefined && typeof saved[k]===typeof DEFAULTS[k])db[k]=saved[k];
+}
+for(const y of YEARS)if(!Array.isArray(db.rotations[y]))db.rotations[y]=[...ROTATIONS[y]];
 
-const db = structuredClone(DEFAULTS);
-for (const key of Object.keys(DEFAULTS)) {
-  if (saved[key] && typeof saved[key] === "object") {
-    db[key] = saved[key];
-  }
+const $=id=>document.getElementById(id);
+const save=()=>localStorage.setItem(KEY,JSON.stringify(db));
+const uid=()=>crypto.randomUUID();
+
+function esc(v){
+ return String(v??"").replace(/[&<>"']/g,c=>({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+ })[c]);
+}
+function opts(items,selected=""){
+ return items.map(x=>`<option value="${esc(x)}" ${x===selected?"selected":""}>${esc(x)}</option>`).join("");
+}
+function card(html){return `<section class="card">${html}</section>`}
+function stat(label,n){return card(`<div class="muted">${esc(label)}</div><div class="metric">${n}</div>`)}
+function back(){return `<button class="btn secondary" onclick="render('technical')">← Back to Technical Admin</button>`}
+function done(a){return db.responses.some(r=>r.assignmentId===a.id)}
+function mapped(f,year,rotation){
+ return (f.mappings||[]).some(m=>m.year===year&&m.rotation===rotation);
+}
+function table(headers,rows){
+ return `<div class="tablewrap"><table><thead><tr>${headers.map(h=>`<th>${esc(h)}</th>`).join("")}</tr></thead>
+ <tbody>${rows.length?rows.map(r=>`<tr>${r.map(v=>`<td>${v}</td>`).join("")}</tr>`).join(""):
+ `<tr><td colspan="${headers.length}">No records yet.</td></tr>`}</tbody></table></div>`;
+}
+function downloadCSV(name,rows){
+ const text=rows.map(r=>r.map(v=>`"${String(v??"").replace(/"/g,'""')}"`).join(",")).join("\r\n");
+ const url=URL.createObjectURL(new Blob(["\uFEFF"+text],{type:"text/csv;charset=utf-8"}));
+ const a=document.createElement("a");a.href=url;a.download=name;a.click();
+ setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function parseCSV(text){
+ const rows=[];let row=[],field="",quoted=false;
+ text=text.replace(/^\uFEFF/,"");
+ for(let i=0;i<text.length;i++){
+  const c=text[i];
+  if(c==='"'){
+   if(quoted&&text[i+1]==='"'){field+='"';i++}else quoted=!quoted;
+  }else if(c===","&&!quoted){row.push(field.trim());field=""}
+  else if((c==="\n"||c==="\r")&&!quoted){
+   if(c==="\r"&&text[i+1]==="\n")i++;
+   row.push(field.trim());if(row.some(Boolean))rows.push(row);
+   row=[];field="";
+  }else field+=c;
+ }
+ if(quoted)throw Error("Unclosed CSV quote");
+ row.push(field.trim());if(row.some(Boolean))rows.push(row);
+ return rows;
 }
 
-const $ = id => document.getElementById(id);
-const save = () => localStorage.setItem(KEY, JSON.stringify(db));
-const uid = () => crypto.randomUUID();
+let currentStudent="DEMO001";
 
-function esc(value) {
-  return String(value ?? "").replace(/[&<>"']/g, c => ({
-    "&":"&amp;", "<":"&lt;", ">":"&gt;",
-    '"':"&quot;", "'":"&#39;"
-  }[c]));
-}
-
-function options(items, selected = "") {
-  return items.map(item =>
-    `<option value="${esc(item)}" ${item === selected ? "selected" : ""}>${esc(item)}</option>`
-  ).join("");
-}
-
-function card(html) {
-  return `<section class="card">${html}</section>`;
-}
-
-function stat(label, value) {
-  return card(`<div class="muted">${esc(label)}</div><div class="metric">${value}</div>`);
-}
-
-function table(headers, rows) {
-  return `<div class="tablewrap"><table>
-    <thead><tr>${headers.map(h => `<th>${esc(h)}</th>`).join("")}</tr></thead>
-    <tbody>${rows.length
-      ? rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")
-      : `<tr><td colspan="${headers.length}">No records yet.</td></tr>`
-    }</tbody>
-  </table></div>`;
-}
-
-const back = () =>
-  `<button class="btn secondary" onclick="render('technical')">← Back to Technical Admin</button>`;
-
-const completed = a => db.responses.some(r => r.assignmentId === a.id);
-
-const facultyMapped = (f, year, rotation) =>
-  f.mappings.some(m => m.year === year && m.rotation === rotation);
-
-let currentStudent = "DEMO001";
-
-function downloadCSV(filename, rows) {
-  const text = rows.map(row =>
-    row.map(v => `"${String(v ?? "").replace(/"/g, '""')}"`).join(",")
-  ).join("\r\n");
-  const url = URL.createObjectURL(
-    new Blob(["\uFEFF" + text], {type:"text/csv;charset=utf-8"})
-  );
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
-
-function parseCSV(text) {
-  const rows = [];
-  let row = [], field = "", quoted = false;
-  text = text.replace(/^\uFEFF/, "");
-
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-    if (c === '"') {
-      if (quoted && text[i+1] === '"') {
-        field += '"'; i++;
-      } else quoted = !quoted;
-    } else if (c === "," && !quoted) {
-      row.push(field.trim()); field = "";
-    } else if ((c === "\n" || c === "\r") && !quoted) {
-      if (c === "\r" && text[i+1] === "\n") i++;
-      row.push(field.trim());
-      if (row.some(Boolean)) rows.push(row);
-      row = []; field = "";
-    } else {
-      field += c;
-    }
-  }
-  if (quoted) throw Error("Unclosed CSV quote");
-  row.push(field.trim());
-  if (row.some(Boolean)) rows.push(row);
-  return rows;
-}
-
-/* NAVIGATION */
-
-function render(page = "student") {
-  document.querySelectorAll(".nav").forEach(b =>
-    b.classList.toggle("active", b.dataset.page === page)
-  );
-
-  const headings = {
-    student:"Student Dashboard",
-    department:"Department Admin",
-    technical:"UGME Technical Admin",
-    students:"Student Management",
-    faculty:"Faculty Directory",
-    rotations:"Rotation Management",
-    admins:"Admin Management",
-    forms:"Evaluation Form Builder",
-    reports:"Evaluation Reports"
-  };
-
-  $("heading").textContent = headings[page] || "UGME Portal";
-  $("subtitle").textContent = "UGME Student Evaluation Portal";
-
-  if (page === "student") renderStudent();
-  if (page === "department") renderDepartment();
-  if (page === "technical") renderTechnical();
-  if (page === "students") renderStudents();
-  if (page === "faculty") renderFaculty();
-  if (page === "rotations") renderRotations();
-  if (page === "admins") renderAdmins();
-  if (page === "forms") renderForms();
-  if (page === "reports") renderReports();
+function render(page="student"){
+ document.querySelectorAll(".nav").forEach(b=>b.classList.toggle("active",b.dataset.page===page));
+ const headings={
+  student:"Student Dashboard",department:"Department Admin",
+  technical:"UGME Technical Admin",students:"Student Management",
+  faculty:"Faculty Directory",rotations:"Rotation Management",
+  forms:"Evaluation Form Builder",admins:"Admin Management",
+  reports:"Evaluation Reports"
+ };
+ $("heading").textContent=headings[page]||"UGME Portal";
+ $("subtitle").textContent="UGME Student Evaluation Portal";
+ const pages={
+  student:renderStudent,department:renderDepartment,
+  technical:renderTechnical,students:renderStudents,
+  faculty:renderFaculty,rotations:renderRotations,
+  forms:renderForms,admins:renderAdmins,reports:renderReports
+ };
+ if(pages[page])pages[page]();
 }
 
 /* STUDENT PORTAL */
 
-function renderStudent() {
-  const s = db.students.find(x => x.id === currentStudent) || db.students[0];
-  if (!s) {
-    $("content").innerHTML = card("No students available.");
-    return;
-  }
-  currentStudent = s.id;
-
-  const assignments = db.assignments.filter(a => a.studentId === s.id);
-  const done = assignments.filter(completed).length;
-
-  $("content").innerHTML = `
-    <div class="notice">
-      Demo student selector only. Real students must be identified through secure login.
-    </div>
-    ${card(`
-      <label>Select Student (Demo)</label>
-      <select id="studentSelect">
-        ${db.students.map(x =>
-          `<option value="${esc(x.id)}" ${x.id === s.id ? "selected" : ""}>
-            ${esc(x.name)} — ${esc(x.year)}
-          </option>`
-        ).join("")}
-      </select>
-      <p class="muted">Academic Year: ${esc(s.year)} · Group: ${esc(s.group || "—")}</p>
-    `)}
-    <div class="grid">
-      ${stat("Assigned Evaluations", assignments.length)}
-      ${stat("Completed", done)}
-      ${stat("Pending", assignments.length - done)}
-    </div>
-    <h2>My Assigned Evaluations</h2>
-    ${assignments.length ? assignments.map(a => card(`
-      <h3>${esc(TYPES[a.type])}</h3>
-      <p class="muted">
-        ${esc(a.rotation)} · ${esc(a.year)}
-        ${a.facultyName ? " · " + esc(a.facultyName) : ""}
-        ${a.activity ? " · " + esc(a.activity) : ""}
-      </p>
-      ${completed(a)
-        ? `<span class="tag">Completed</span>`
-        : `<button class="btn" data-open="${esc(a.id)}">Start Evaluation</button>`}
-    `)).join("") : card(`<p class="muted">No evaluations assigned yet.</p>`)}
-  `;
-
-  $("studentSelect").onchange = e => {
-    currentStudent = e.target.value;
-    renderStudent();
-  };
-
-  document.querySelectorAll("[data-open]").forEach(b =>
-    b.onclick = () => openEvaluation(b.dataset.open)
-  );
+function renderStudent(){
+ const student=db.students.find(s=>s.id===currentStudent)||db.students[0];
+ if(!student){$("content").innerHTML=card("No students available.");return}
+ currentStudent=student.id;
+ const assignments=db.assignments.filter(a=>a.studentId===student.id);
+ const complete=assignments.filter(done).length;
+ $("content").innerHTML=`
+ <div class="notice">Demonstration student selector. Real Scholar ID login is not implemented.</div>
+ ${card(`
+  <h2>My Evaluations</h2>
+  <label>Demo Student</label>
+  <select id="studentSelect">${db.students.map(s=>`
+   <option value="${esc(s.id)}" ${s.id===student.id?"selected":""}>${esc(s.name)} — ${esc(s.year)}</option>
+  `).join("")}</select>
+  <p class="muted">Student ID: ${esc(student.id)} · ${esc(student.year)}</p>
+ `)}
+ <div class="grid">
+  ${stat("Assigned",assignments.length)}
+  ${stat("Completed",complete)}
+  ${stat("Pending",assignments.length-complete)}
+ </div>
+ ${assignments.length?assignments.map(a=>card(`
+  <h3>${esc(TYPES[a.type])}</h3>
+  <p class="muted">${esc(a.rotation)} · ${esc(a.facultyName||a.activity||"")}</p>
+  ${done(a)?`<span class="tag">Completed</span>`:
+  `<button class="btn" data-open="${esc(a.id)}">Start Evaluation</button>`}
+ `)).join(""):card(`<p class="muted">No evaluations assigned yet.</p>`)}
+ `;
+ $("studentSelect").onchange=e=>{currentStudent=e.target.value;renderStudent()};
+ document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>openEvaluation(b.dataset.open));
 }
 
 /* TECHNICAL ADMIN */
 
-function renderTechnical() {
-  $("content").innerHTML = `
-    <div class="grid">
-      ${stat("Students", db.students.length)}
-      ${stat("Faculty", db.faculty.length)}
-      ${stat("Rotation Entries", YEARS.reduce((n,y) => n + db.rotations[y].length,0))}
-      ${stat("Assignments", db.assignments.length)}
-    </div>
-    ${card(`
-      <h2>UGME Management Tools</h2>
-      <div class="management-grid">
-        <button class="tool-card" onclick="render('students')">🎓 Student Management</button>
-        <button class="tool-card" onclick="render('faculty')">👩‍🏫 Faculty Directory</button>
-        <button class="tool-card" onclick="render('rotations')">📅 Rotation Management</button>
-        <button class="tool-card" onclick="render('forms')">📝 Evaluation Form Builder</button>
-        <button class="tool-card" onclick="render('admins')">🔐 Admin Management</button>
-        <button class="tool-card" onclick="render('reports')">📊 Evaluation Reports</button>
-      </div>
-    `)}
-    ${card(`
-      <h2>Four Evaluation Forms</h2>
-      ${Object.values(TYPES).map(t => `<p>✓ ${esc(t)}</p>`).join("")}
-      <p class="muted">Current questionnaires contain demonstration questions.</p>
-    `)}
-  `;
+function renderTechnical(){
+ $("content").innerHTML=`
+ <div class="grid">
+ ${stat("Students",db.students.length)}
+ ${stat("Faculty",db.faculty.length)}
+ ${stat("Assignments",db.assignments.length)}
+ ${stat("Completed",db.assignments.filter(done).length)}
+ </div>
+ ${card(`
+ <h2>Management Tools</h2>
+ <div class="management-grid">
+ <button class="tool-card" onclick="render('students')">🎓 Student Management</button>
+ <button class="tool-card" onclick="render('faculty')">👩‍🏫 Faculty Directory</button>
+ <button class="tool-card" onclick="render('rotations')">📅 Rotation Management</button>
+ <button class="tool-card" onclick="render('forms')">📝 Form Builder</button>
+ <button class="tool-card" onclick="render('admins')">🔐 Admin Management</button>
+ <button class="tool-card" onclick="render('reports')">📊 Evaluation Reports</button>
+ </div>
+ `)}
+ `;
 }
 
 /* STUDENT MANAGEMENT */
 
-function renderStudents() {
-  $("content").innerHTML = back() + card(`
-    <h2>Add Student</h2>
-    <form id="studentForm">
-      <div class="fields">
-        <div><label>Student Name</label><input name="name" required></div>
-        <div><label>Student ID</label><input name="id" required></div>
-        <div><label>Email</label><input name="email" type="email"></div>
-        <div><label>Academic Year</label><select name="year">${options(YEARS)}</select></div>
-        <div><label>Group</label><input name="group"></div>
-        <div><label>Subgroup</label><input name="subgroup"></div>
-      </div>
-      <button class="btn">Add Student</button>
-    </form>
-  `) + card(`
-    <h2>Bulk Student Import</h2>
-    <p class="muted">Import CSV with columns: Name, Student ID, Email, Academic Year, Group, Subgroup.</p>
-    <button class="btn secondary" id="studentTemplate">Download CSV Template</button>
-    <input type="file" id="studentFile" accept=".csv">
-    <button class="btn" id="importStudents">Import Students</button>
-  `) + card(`
-    <h2>Student Directory</h2>
-    ${table(["Name","ID","Year","Group","Subgroup","Action"],
-      db.students.map(s => [
-        esc(s.name), esc(s.id), esc(s.year),
-        esc(s.group || "—"), esc(s.subgroup || "—"),
-        `<button class="btn danger" data-delete-student="${esc(s.id)}">Remove</button>`
-      ])
-    )}
-  `);
-
-  $("studentForm").onsubmit = e => {
-    e.preventDefault();
-    const d = new FormData(e.target);
-    const id = String(d.get("id")).trim();
-    if (db.students.some(s => s.id === id)) return alert("Student ID already exists.");
-    db.students.push({
-      id, name:String(d.get("name")).trim(),
-      email:String(d.get("email")).trim(),
-      year:d.get("year"),
-      group:String(d.get("group")).trim(),
-      subgroup:String(d.get("subgroup")).trim()
-    });
-    save(); renderStudents();
-  };
-
-  $("studentTemplate").onclick = () => downloadCSV("student-template.csv", [
-    ["Name","Student ID","Email","Academic Year","Group","Subgroup"],
-    ["Demo Student D","DEMO004","demo@example.org","Year 3","A","A2"]
-  ]);
-
-  $("importStudents").onclick = async () => {
-    const file = $("studentFile").files[0];
-    if (!file) return alert("Choose a CSV file.");
-    try {
-      const rows = parseCSV(await file.text());
-      const expected = ["Name","Student ID","Email","Academic Year","Group","Subgroup"];
-      if (!rows.length || rows[0].join("|").toLowerCase() !== expected.join("|").toLowerCase())
-        throw Error("Incorrect CSV headings.");
-
-      const staged = [];
-      const ids = new Set(db.students.map(s => s.id));
-      for (const [i,row] of rows.slice(1).entries()) {
-        if (row.length !== 6) throw Error("Incorrect columns on row " + (i+2));
-        const [name,id,email,year,group,subgroup] = row;
-        if (!name || !id || !YEARS.includes(year) || ids.has(id))
-          throw Error("Invalid or duplicate record on row " + (i+2));
-        ids.add(id);
-        staged.push({name,id,email,year,group,subgroup});
-      }
-      db.students.push(...staged);
-      save(); alert(staged.length + " students imported.");
-      renderStudents();
-    } catch (err) {
-      alert("Import failed: " + err.message);
-    }
-  };
-
-  document.querySelectorAll("[data-delete-student]").forEach(b => b.onclick = () => {
-    const id = b.dataset.deleteStudent;
-    if (db.assignments.some(a => a.studentId === id))
-      return alert("Cannot remove a student with assignments.");
-    if (!confirm("Remove this demo student?")) return;
-    db.students = db.students.filter(s => s.id !== id);
-    save(); renderStudents();
-  });
+function renderStudents(){
+ $("content").innerHTML=back()+card(`
+ <h2>Add Student</h2>
+ <form id="studentForm">
+ <div class="fields">
+ <div><label>Student Name</label><input name="name" required></div>
+ <div><label>Student ID</label><input name="id" required></div>
+ <div><label>Email</label><input name="email" type="email"></div>
+ <div><label>Academic Year</label><select name="year">${opts(YEARS)}</select></div>
+ </div>
+ <button class="btn">Add Student</button>
+ </form>
+ `)+card(`
+ <h2>Bulk Import Students</h2>
+ <p class="muted">CSV columns: Name, Student ID, Email, Academic Year.</p>
+ <button class="btn secondary" id="template">Download Sample CSV</button>
+ <input type="file" id="csvFile" accept=".csv">
+ <button class="btn" id="importCSV">Import Students</button>
+ `)+card(`
+ <h2>Student Directory</h2>
+ ${table(["Student Name","Student ID","Email","Academic Year","Action"],
+ db.students.map(s=>[
+  esc(s.name),esc(s.id),esc(s.email||"—"),esc(s.year),
+  `<button class="btn danger" data-delete-student="${esc(s.id)}">Remove</button>`
+ ]))}
+ `);
+ $("studentForm").onsubmit=e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  const id=String(d.get("id")).trim();
+  if(db.students.some(s=>s.id===id))return alert("Student ID already exists.");
+  db.students.push({
+   id,name:String(d.get("name")).trim(),
+   email:String(d.get("email")).trim(),year:d.get("year")
+  });save();renderStudents();
+ };
+ $("template").onclick=()=>downloadCSV("student-template.csv",[
+  ["Name","Student ID","Email","Academic Year"],
+  ["Demo Student E","DEMO005","demo@example.org","Year 3"]
+ ]);
+ $("importCSV").onclick=async()=>{
+  const file=$("csvFile").files[0];
+  if(!file)return alert("Choose a CSV file.");
+  try{
+   const rows=parseCSV(await file.text());
+   if(!rows.length||rows[0].map(x=>x.toLowerCase()).join("|")!==
+    ["name","student id","email","academic year"].join("|"))
+    throw Error("Incorrect CSV headings.");
+   const ids=new Set(db.students.map(s=>s.id));
+   const incoming=[];
+   for(const [i,r] of rows.slice(1).entries()){
+    if(r.length!==4||!r[0]||!r[1]||!YEARS.includes(r[3])||ids.has(r[1]))
+     throw Error("Invalid or duplicate row "+(i+2));
+    ids.add(r[1]);
+    incoming.push({name:r[0],id:r[1],email:r[2],year:r[3]});
+   }
+   db.students.push(...incoming);save();
+   alert(incoming.length+" students imported.");renderStudents();
+  }catch(err){alert("Import failed: "+err.message)}
+ };
+ document.querySelectorAll("[data-delete-student]").forEach(b=>b.onclick=()=>{
+  const id=b.dataset.deleteStudent;
+  if(db.assignments.some(a=>a.studentId===id))return alert("Student has assignments.");
+  if(!confirm("Remove demo student?"))return;
+  db.students=db.students.filter(s=>s.id!==id);save();renderStudents();
+ });
 }
 
 /* ROTATION MANAGEMENT */
 
-function renderRotations() {
-  $("content").innerHTML = back() + card(`
-    <h2>Year-wise Rotation Management</h2>
-    <form id="rotationForm">
-      <div class="fields">
-        <div>
-          <label>Academic Year</label>
-          <select name="year">${options(YEARS)}</select>
-        </div>
-        <div>
-          <label>Rotation Name</label>
-          <input name="rotation" required placeholder="Enter rotation name">
-        </div>
-      </div>
-      <button class="btn">Add Rotation</button>
-    </form>
-  `) + YEARS.map(year => card(`
-    <h2>${year} Rotations (${db.rotations[year].length})</h2>
-    ${table(["Rotation","Action"], db.rotations[year].map(r => [
-      esc(r),
-      `<button class="btn danger" data-year="${esc(year)}" data-rotation="${esc(r)}">Remove</button>`
-    ]))}
-  `)).join("");
-
-  $("rotationForm").onsubmit = e => {
-    e.preventDefault();
-    const d = new FormData(e.target);
-    const year = d.get("year");
-    const rotation = String(d.get("rotation")).trim();
-    if (db.rotations[year].some(r => r.toLowerCase() === rotation.toLowerCase()))
-      return alert("Rotation already exists for this year.");
-    db.rotations[year].push(rotation);
-    save(); renderRotations();
-  };
-
-  document.querySelectorAll("[data-rotation]").forEach(b => b.onclick = () => {
-    const year = b.dataset.year, rotation = b.dataset.rotation;
-    if (db.faculty.some(f => facultyMapped(f,year,rotation)) ||
-        db.assignments.some(a => a.year === year && a.rotation === rotation))
-      return alert("This rotation is linked to faculty or assignments.");
-    if (!confirm("Remove this rotation?")) return;
-    db.rotations[year] = db.rotations[year].filter(r => r !== rotation);
-    save(); renderRotations();
-  });
+function renderRotations(){
+ $("content").innerHTML=back()+card(`
+ <h2>Add Rotation</h2>
+ <form id="rotationForm">
+ <div class="fields">
+ <div><label>Academic Year</label><select name="year">${opts(YEARS)}</select></div>
+ <div><label>Rotation Name</label><input name="rotation" required></div>
+ </div>
+ <button class="btn">Add Rotation</button>
+ </form>
+ `)+YEARS.map(year=>card(`
+ <h2>${year} — ${db.rotations[year].length} Rotations</h2>
+ ${table(["Rotation","Action"],db.rotations[year].map(r=>[
+  esc(r),`<button class="btn danger" data-year="${esc(year)}" data-rotation="${esc(r)}">Remove</button>`
+ ]))}
+ `)).join("");
+ $("rotationForm").onsubmit=e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  const year=d.get("year"),rotation=String(d.get("rotation")).trim();
+  if(db.rotations[year].some(r=>r.toLowerCase()===rotation.toLowerCase()))
+   return alert("Rotation already exists.");
+  db.rotations[year].push(rotation);save();renderRotations();
+ };
+ document.querySelectorAll("[data-rotation]").forEach(b=>b.onclick=()=>{
+  const year=b.dataset.year,r=b.dataset.rotation;
+  if(db.faculty.some(f=>mapped(f,year,r))||
+     db.assignments.some(a=>a.year===year&&a.rotation===r))
+   return alert("Rotation is linked to faculty or assignments.");
+  if(!confirm("Remove rotation?"))return;
+  db.rotations[year]=db.rotations[year].filter(x=>x!==r);
+  save();renderRotations();
+ });
 }
 
 /* FACULTY DIRECTORY */
 
-function renderFaculty() {
-  $("content").innerHTML = back() + card(`
-    <h2>Add Faculty / Map to Rotation</h2>
-    <p class="muted">The same faculty member can teach across multiple years and rotations.</p>
-    <form id="facultyForm">
-      <div class="fields">
-        <div><label>Faculty Name</label><input name="name" required></div>
-        <div><label>Department</label><input name="department" required></div>
-        <div><label>Academic Year</label><select id="facultyYear" name="year">${options(YEARS)}</select></div>
-        <div><label>Rotation</label><select id="facultyRotation" name="rotation"></select></div>
-      </div>
-      <button class="btn">Save Faculty Mapping</button>
-    </form>
-  `) + card(`
-    <h2>Faculty Directory</h2>
-    ${table(["Faculty","Department","Year / Rotation Mappings","Action"],
-      db.faculty.map(f => [
-        esc(f.name),esc(f.department),
-        f.mappings.map(m => `${esc(m.year)} — ${esc(m.rotation)}`).join("<br>"),
-        `<button class="btn danger" data-delete-faculty="${esc(f.id)}">Remove</button>`
-      ])
-    )}
-  `);
-
-  const updateRotations = () =>
-    $("facultyRotation").innerHTML = options(db.rotations[$("facultyYear").value]);
-  $("facultyYear").onchange = updateRotations;
-  updateRotations();
-
-  $("facultyForm").onsubmit = e => {
-    e.preventDefault();
-    const d = new FormData(e.target);
-    const name = String(d.get("name")).trim();
-    const department = String(d.get("department")).trim();
-    const year = d.get("year"), rotation = d.get("rotation");
-
-    let f = db.faculty.find(x =>
-      x.name.toLowerCase() === name.toLowerCase() &&
-      x.department.toLowerCase() === department.toLowerCase()
-    );
-    if (!f) {
-      f = {id:uid(),name,department,mappings:[]};
-      db.faculty.push(f);
-    }
-    if (facultyMapped(f,year,rotation))
-      return alert("Faculty is already mapped to this rotation.");
-    f.mappings.push({year,rotation});
-    save(); renderFaculty();
-  };
-
-  document.querySelectorAll("[data-delete-faculty]").forEach(b => b.onclick = () => {
-    const id = b.dataset.deleteFaculty;
-    if (db.assignments.some(a => a.facultyId === id))
-      return alert("Cannot remove faculty with existing assignments.");
-    if (!confirm("Remove this faculty member?")) return;
-    db.faculty = db.faculty.filter(f => f.id !== id);
-    save(); renderFaculty();
-  });
+function renderFaculty(){
+ $("content").innerHTML=back()+card(`
+ <h2>Add Faculty / Map Rotation</h2>
+ <p class="muted">One faculty profile can be mapped to multiple academic years and rotations.</p>
+ <form id="facultyForm">
+ <div class="fields">
+ <div><label>Faculty Name</label><input name="name" required></div>
+ <div><label>Department</label><input name="department" required></div>
+ <div><label>Academic Year</label><select name="year" id="facultyYear">${opts(YEARS)}</select></div>
+ <div><label>Rotation</label><select name="rotation" id="facultyRotation" required></select></div>
+ </div>
+ <button class="btn">Save Faculty Mapping</button>
+ </form>
+ `)+card(`
+ <h2>Faculty Directory</h2>
+ ${table(["Faculty","Department","Year / Rotation","Action"],
+ db.faculty.map(f=>[
+  esc(f.name),esc(f.department),
+  (f.mappings||[]).map(m=>`${esc(m.year)} — ${esc(m.rotation)}`).join("<br>"),
+  `<button class="btn danger" data-delete-faculty="${esc(f.id)}">Remove</button>`
+ ]))}
+ `);
+ const update=()=>$("facultyRotation").innerHTML=opts(db.rotations[$("facultyYear").value]);
+ $("facultyYear").onchange=update;update();
+ $("facultyForm").onsubmit=e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  const name=String(d.get("name")).trim();
+  const department=String(d.get("department")).trim();
+  const year=d.get("year"),rotation=d.get("rotation");
+  let f=db.faculty.find(x=>x.name.toLowerCase()===name.toLowerCase()&&
+    x.department.toLowerCase()===department.toLowerCase());
+  if(!f){f={id:uid(),name,department,mappings:[]};db.faculty.push(f)}
+  if(mapped(f,year,rotation))return alert("Mapping already exists.");
+  f.mappings.push({year,rotation});save();renderFaculty();
+ };
+ document.querySelectorAll("[data-delete-faculty]").forEach(b=>b.onclick=()=>{
+  const id=b.dataset.deleteFaculty;
+  if(db.assignments.some(a=>a.facultyId===id))return alert("Faculty has assignments.");
+  if(!confirm("Remove faculty?"))return;
+  db.faculty=db.faculty.filter(f=>f.id!==id);save();renderFaculty();
+ });
 }
 
 /* ADMIN MANAGEMENT */
 
-function renderAdmins() {
-  $("content").innerHTML = back() + card(`
-    <h2>Admin Management</h2>
-    <p class="muted">These are demo admin records, not real user accounts.</p>
-    <form id="adminForm">
-      <div class="fields">
-        <div><label>Name</label><input name="name" required></div>
-        <div><label>Email</label><input name="email" type="email" required></div>
-        <div><label>Department</label><input name="department" required></div>
-        <div><label>Role</label>
-          <select name="role">
-            <option>Department Admin</option>
-            <option>UGME Technical Admin</option>
-          </select>
-        </div>
-      </div>
-      <button class="btn">Add Admin</button>
-    </form>
-  `) + card(`
-    <h2>Admin Directory</h2>
-    ${table(["Name","Email","Department","Role","Action"],
-      db.admins.map(a => [
-        esc(a.name),esc(a.email),esc(a.department),esc(a.role),
-        `<button class="btn danger" data-delete-admin="${esc(a.id)}">Remove</button>`
-      ])
-    )}
-  `);
-
-  $("adminForm").onsubmit = e => {
-    e.preventDefault();
-    const d = new FormData(e.target);
-    const email = String(d.get("email")).trim().toLowerCase();
-    if (db.admins.some(a => a.email === email)) return alert("Email already exists.");
-    db.admins.push({
-      id:uid(), name:String(d.get("name")).trim(),
-      email,department:String(d.get("department")).trim(),role:d.get("role")
-    });
-    save(); renderAdmins();
-  };
-
-  document.querySelectorAll("[data-delete-admin]").forEach(b => b.onclick = () => {
-    if (!confirm("Remove admin record?")) return;
-    db.admins = db.admins.filter(a => a.id !== b.dataset.deleteAdmin);
-    save(); renderAdmins();
-  });
+function renderAdmins(){
+ $("content").innerHTML=back()+card(`
+ <h2>Admin Management</h2>
+ <p class="muted">Demo directory only. These records do not create real logins.</p>
+ <form id="adminForm">
+ <div class="fields">
+ <div><label>Name</label><input name="name" required></div>
+ <div><label>Email</label><input name="email" type="email" required></div>
+ <div><label>Department</label><input name="department" required></div>
+ <div><label>Role</label><select name="role">
+ <option>Department Admin</option><option>UGME Technical Admin</option>
+ </select></div>
+ </div>
+ <button class="btn">Add Admin</button>
+ </form>
+ `)+card(`
+ <h2>Admin Directory</h2>
+ ${table(["Name","Email","Department","Role","Action"],db.admins.map(a=>[
+  esc(a.name),esc(a.email),esc(a.department),esc(a.role),
+  `<button class="btn danger" data-delete-admin="${esc(a.id)}">Remove</button>`
+ ]))}
+ `);
+ $("adminForm").onsubmit=e=>{
+  e.preventDefault();const d=new FormData(e.target);
+  const email=String(d.get("email")).trim().toLowerCase();
+  if(db.admins.some(a=>a.email===email))return alert("Email already exists.");
+  db.admins.push({id:uid(),name:String(d.get("name")).trim(),
+   email,department:String(d.get("department")).trim(),role:d.get("role")});
+  save();renderAdmins();
+ };
+ document.querySelectorAll("[data-delete-admin]").forEach(b=>b.onclick=()=>{
+  if(!confirm("Remove admin?"))return;
+  db.admins=db.admins.filter(a=>a.id!==b.dataset.deleteAdmin);
+  save();renderAdmins();
+ });
 }
 
 /* FORM BUILDER */
 
-function renderForms() {
-  $("content").innerHTML = back() + card(`
-    <h2>Manage Four Evaluation Questionnaires</h2>
-    <label>Evaluation Type</label>
-    <select id="formType">
-      ${Object.entries(TYPES).map(([k,v]) => `<option value="${k}">${esc(v)}</option>`).join("")}
-    </select>
-  `) + `<div id="questionArea"></div>`;
-
-  function show() {
-    const type = $("formType").value;
-    $("questionArea").innerHTML = card(`
-      <h2>${esc(TYPES[type])}</h2>
-      <p class="muted">Sample questions only. Replace these with the approved VLE questionnaire.</p>
-      <form id="questionForm">
-        <label>Add Question</label>
-        <input name="question" required>
-        <button class="btn">Add Question</button>
-      </form>
-      ${table(["#","Question","Action"],db.questions[type].map((q,i) => [
-        i+1,esc(q),
-        `<button class="btn danger" data-question="${i}">Remove</button>`
-      ]))}
-    `);
-
-    $("questionForm").onsubmit = e => {
-      e.preventDefault();
-      const q = String(new FormData(e.target).get("question")).trim();
-      if (q) db.questions[type].push(q);
-      save(); show();
-    };
-
-    document.querySelectorAll("[data-question]").forEach(b => b.onclick = () => {
-      if (!confirm("Remove question from future evaluations?")) return;
-      db.questions[type].splice(Number(b.dataset.question),1);
-      save(); show();
-    });
-  }
-
-  $("formType").onchange = show;
-  show();
-}
-
-/* DEPARTMENT ADMIN */
-
-function renderDepartment() {
-  $("content").innerHTML = `
-    <div class="notice">
-      Department Admin sees assignment completion only, not confidential responses.
-      Actual access restrictions require secure authentication.
-    </div>
-    ${card(`
-      <h2>Assign Student Evaluations</h2>
-      <form id="assignForm">
-        <div class="fields">
-          <div><label>Academic Year</label><select id="assignYear" name="year">${options(YEARS)}</select></div>
-          <div><label>Rotation Number</label><input name="rotationNo" type="number" min="1" placeholder="1"></div>
-          <div><label>Rotation</label><select id="assignRotation" name="rotation"></select></div>
-          <div>
-            <label>Evaluation Form</label>
-            <select id="assignType" name="type">
-              ${Object.entries(TYPES).map(([k,v]) =>
-                `<option value="${k}">${esc(v)}</option>`).join("")}
-            </select>
-          </div>
-          <div><label>Student Group</label><select id="assignGroup"></select></div>
-          <div><label>Subgroup</label><select id="assignSubgroup"></select></div>
-          <div><label>Rotation Start Date</label><input name="startDate" type="date"></div>
-          <div><label>Rotation End Date</label><input name="endDate" type="date"></div>
-        </div>
-
-        <div id="targetArea"></div>
-
-        <h3>Select Students</h3>
-        <label>Search by Student Name or ID</label>
-        <input id="studentSearch" placeholder="Search students">
-        <label style="display:flex;gap:9px;align-items:center">
-          <input type="checkbox" id="selectAll"> Select All Displayed Students
-        </label>
-        <div class="checks" id="studentChoices"></div>
-        <p><strong>Selected Students: <span id="selectedCount">0</span></strong></p>
-        <button class="btn">Assign Evaluations</button>
-      </form>
-    `)}
-    ${card(`
-      <h2>Evaluation Completion Status</h2>
-      ${table(["Student","Year","Rotation","Form","Faculty / Activity","Status"],
-        db.assignments.map(a => [
-          esc(db.students.find(s => s.id === a.studentId)?.name || a.studentId),
-          esc(a.year),esc(a.rotation),esc(TYPES[a.type]),
-          esc(a.facultyName || a.activity || "—"),
-          completed(a) ? "Completed" : "Pending"
-        ])
-      )}
-    `)}
-  `;
-
-  const selected = new Set();
-
-  function eligible() {
-    const year = $("assignYear").value;
-    const group = $("assignGroup").value;
-    const subgroup = $("assignSubgroup").value;
-    const search = $("studentSearch").value.toLowerCase().trim();
-
-    return db.students.filter(s =>
-      s.year === year &&
-      (!group || s.group === group) &&
-      (!subgroup || s.subgroup === subgroup) &&
-      (!search || s.name.toLowerCase().includes(search) ||
-        s.id.toLowerCase().includes(search))
-    );
-  }
-
-  function refreshGroups() {
-    const year = $("assignYear").value;
-    const group = $("assignGroup").value;
-    const subgroup = $("assignSubgroup").value;
-    const students = db.students.filter(s => s.year === year);
-    const groups = [...new Set(students.map(s => s.group).filter(Boolean))];
-    $("assignGroup").innerHTML = `<option value="">All Groups</option>` + options(groups,group);
-
-    const subs = [...new Set(students
-      .filter(s => !$("assignGroup").value || s.group === $("assignGroup").value)
-      .map(s => s.subgroup).filter(Boolean))];
-    $("assignSubgroup").innerHTML = `<option value="">All Subgroups</option>` + options(subs,subgroup);
-  }
-
-  function refreshTarget() {
-    const type = $("assignType").value;
-    const year = $("assignYear").value;
-    const rotation = $("assignRotation").value;
-
-    if (type === "faculty") {
-      const faculty = db.faculty.filter(f => facultyMapped(f,year,rotation));
-      $("targetArea").innerHTML = `
-        <h3>Assign Faculty for Evaluation</h3>
-        <p class="muted">Showing faculty mapped to ${esc(year)} — ${esc(rotation)}.</p>
-        <div class="checks">
-          ${faculty.length ? faculty.map(f => `
-            <label>
-              <input type="checkbox" class="facultyCheck" value="${esc(f.id)}">
-              ${esc(f.name)} (${esc(f.department)})
-            </label>
-          `).join("") : `<p class="muted">No faculty mapped to this rotation. Add mappings in Faculty Directory.</p>`}
-        </div>`;
-    } else if (type === "teaching" || type === "cbil") {
-      $("targetArea").innerHTML = `
-        <label>${type === "cbil" ? "CBIL Session" : "Teaching Activity / Session"}</label>
-        <input name="activity" required placeholder="Enter activity name">
-      `;
-    } else {
-      $("targetArea").innerHTML =
-        `<p class="muted">Students will evaluate the selected rotation.</p>`;
-    }
-  }
-
-  function refreshStudents() {
-    const list = eligible();
-    $("studentChoices").innerHTML = list.length ? list.map(s => `
-      <label>
-        <input type="checkbox" class="studentCheck" value="${esc(s.id)}"
-          ${selected.has(s.id) ? "checked" : ""}>
-        ${esc(s.name)} <span class="muted">${esc(s.id)}</span>
-      </label>
-    `).join("") : `<p class="muted">No students match these filters.</p>`;
-
-    document.querySelectorAll(".studentCheck").forEach(b => b.onchange = () => {
-      b.checked ? selected.add(b.value) : selected.delete(b.value);
-      updateCount();
-    });
-    updateCount();
-  }
-
-  function updateCount() {
-    $("selectedCount").textContent = selected.size;
-    const list = eligible();
-    $("selectAll").checked = list.length > 0 && list.every(s => selected.has(s.id));
-  }
-
-  $("assignYear").onchange = () => {
-    selected.clear();
-    $("assignRotation").innerHTML = options(db.rotations[$("assignYear").value]);
-    refreshGroups(); refreshTarget(); refreshStudents();
-  };
-  $("assignRotation").onchange = refreshTarget;
-  $("assignType").onchange = refreshTarget;
-  $("assignGroup").onchange = () => {
-    selected.clear(); refreshGroups(); refreshStudents();
-  };
-  $("assignSubgroup").onchange = () => {
-    selected.clear(); refreshStudents();
-  };
-  $("studentSearch").oninput = refreshStudents;
-  $("selectAll").onchange = e => {
-    eligible().forEach(s => {
-      e.target.checked ? selected.add(s.id) : selected.delete(s.id);
-    });
-    refreshStudents();
-  };
-
-  $("assignForm").onsubmit = e => {
-    e.preventDefault();
-    const d = new FormData(e.target);
-    const year = d.get("year"), rotation = d.get("rotation");
-    const type = d.get("type");
-    const rotationNo = String(d.get("rotationNo") || "");
-    const startDate = String(d.get("startDate") || "");
-    const endDate = String(d.get("endDate") || "");
-    const activity = String(d.get("activity") || "").trim();
-
-    if (!selected.size) return alert("Select at least one student.");
-    if (startDate && endDate && endDate < startDate)
-      return alert("End date cannot be before start date.");
-
-    const facultyIds = type === "faculty"
-      ? [...document.querySelectorAll(".facultyCheck:checked")].map(b => b.value)
-      : [null];
-
-    if (!facultyIds.length) return alert("Select at least one faculty member.");
-
-    let added = 0;
-    for (const studentId of selected) {
-      for (const facultyId of facultyIds) {
-        const f = facultyId ? db.faculty.find(x => x.id === facultyId) : null;
-        if (type === "faculty" && (!f || !facultyMapped(f,year,rotation))) continue;
-
-        const duplicate = db.assignments.some(a =>
-          a.studentId === studentId &&
-          a.year === year &&
-          a.rotation === rotation &&
-          a.rotationNo === rotationNo &&
-          a.type === type &&
-          (type === "faculty"
-            ? a.facultyId === facultyId
-            : type === "rotation" || a.activity === activity)
-        );
-        if (duplicate) continue;
-
-        db.assignments.push({
-          id:uid(),studentId,year,rotation,rotationNo,type,
-          facultyId:facultyId || "",
-          facultyName:f?.name || "",
-          activity,startDate,endDate
-        });
-        added++;
-      }
-    }
-    save();
-    alert(added + " new evaluation assignments created. Duplicates skipped.");
-    renderDepartment();
-  };
-
-  $("assignRotation").innerHTML = options(db.rotations[$("assignYear").value]);
-  refreshGroups(); refreshTarget(); refreshStudents();
-}
-
-/* STUDENT EVALUATION FORM */
-
-function openEvaluation(id) {
-  const a = db.assignments.find(x => x.id === id);
-  if (!a || completed(a)) return alert("Evaluation unavailable.");
-
-  const questions = [...db.questions[a.type]];
-  $("heading").textContent = TYPES[a.type];
-  $("subtitle").textContent = a.year + " · " + a.rotation;
-
-  $("content").innerHTML = card(`
-    <button class="btn secondary" onclick="render('student')">← Back to Student Dashboard</button>
-    <h2>${esc(TYPES[a.type])}</h2>
-    <p class="muted">
-      ${esc(a.rotation)}
-      ${a.facultyName ? " · " + esc(a.facultyName) : ""}
-      ${a.activity ? " · " + esc(a.activity) : ""}
-    </p>
-    <form id="evaluationForm">
-      ${questions.map((q,i) => `
-        <label>${i+1}. ${esc(q)}</label>
-        <select name="q${i}" required>
-          <option value="">Select Rating</option>
-          <option value="2">2 — Poor</option>
-          <option value="3">3 — Fair</option>
-          <option value="4">4 — Good</option>
-          <option value="5">5 — Very Good</option>
-          <option value="6">6 — Excellent</option>
-        </select>
-      `).join("")}
-      <label>Comments (optional)</label>
-      <textarea name="comments"></textarea>
-      <button class="btn">Submit Evaluation</button>
-    </form>
+function renderForms(){
+ $("content").innerHTML=back()+card(`
+ <h2>Evaluation Form Builder</h2>
+ <p class="muted">Manage questions separately for all four forms.</p>
+ <label>Evaluation Type</label>
+ <select id="formType">${Object.entries(TYPES).map(([k,v])=>
+ `<option value="${k}">${esc(v)}</option>`).join("")}</select>
+ `)+`<div id="formArea"></div>`;
+ function show(){
+  const type=$("formType").value,form=db.forms[type];
+  $("formArea").innerHTML=card(`
+   <h2>${esc(TYPES[type])}</h2>
+   <p class="muted">Rating scale: ${form.values.map((v,i)=>v+" = "+form.scale[i]).join(" · ")}</p>
+   ${form.sections.map((section,si)=>`
+    <h3>${esc(section.title)}</h3>
+    ${table(["#","Question","Action"],section.questions.map((q,qi)=>[
+     qi+1,esc(q),
+     `<button class="btn danger" data-section="${si}" data-question="${qi}">Remove</button>`
+    ]))}
+   `).join("")}
+   <form id="questionForm">
+    <label>Add Question to Section</label>
+    <select name="section">${form.sections.map((s,i)=>
+     `<option value="${i}">${esc(s.title)}</option>`).join("")}</select>
+    <input name="question" required placeholder="Enter question">
+    <button class="btn">Add Question</button>
+   </form>
   `);
-
-  $("evaluationForm").onsubmit = e => {
-    e.preventDefault();
-    if (completed(a)) return alert("Already submitted.");
-
-    const d = new FormData(e.target);
-    db.responses.push({
-      assignmentId:a.id,
-      studentId:a.studentId,
-      year:a.year,
-      rotation:a.rotation,
-      type:a.type,
-      facultyName:a.facultyName,
-      activity:a.activity,
-      questions,
-      ratings:questions.map((_,i) => Number(d.get("q"+i))),
-      comments:String(d.get("comments") || ""),
-      date:new Date().toISOString()
-    });
-    save();
-    alert("Demo evaluation submitted successfully.");
-    render("student");
+  $("questionForm").onsubmit=e=>{
+   e.preventDefault();const d=new FormData(e.target);
+   form.sections[Number(d.get("section"))].questions.push(String(d.get("question")).trim());
+   save();show();
   };
+  document.querySelectorAll("[data-question]").forEach(b=>b.onclick=()=>{
+   if(!confirm("Remove question from future evaluations?"))return;
+   form.sections[Number(b.dataset.section)].questions.splice(Number(b.dataset.question),1);
+   save();show();
+  });
+ }
+ $("formType").onchange=show;show();
 }
 
-/* UGME REPORTS */
+/* DEPARTMENT ADMIN — IMPROVED UI */
 
-function renderReports() {
-  $("content").innerHTML = back() + `
-    <div class="notice">
-      Confidential responses are visible here for demonstration only.
-      A production system must enforce UGME-only access on the server.
+function renderDepartment(){
+ $("content").innerHTML=`
+ <div class="notice">
+ Department Admin assigns evaluations and monitors completion.
+ Confidential individual responses are not displayed in this section.
+ </div>
+ <div class="assignment-layout">
+  <section class="card">
+   <h2>Assign Student Evaluations</h2>
+   <p class="muted">Select the evaluation details, faculty and students.</p>
+   <form id="assignForm">
+    <div class="section-label">1. Evaluation Details</div>
+    <div class="fields">
+     <div><label>Academic Year</label><select name="year" id="assignYear">${opts(YEARS)}</select></div>
+     <div><label>Rotation Number</label><input name="rotationNo" type="number" min="1" placeholder="Optional"></div>
+     <div><label>Rotation</label><select name="rotation" id="assignRotation" required></select></div>
+     <div><label>Evaluation Form</label><select name="type" id="assignType">
+      ${Object.entries(TYPES).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join("")}
+     </select></div>
+     <div><label>Rotation Start Date</label><input name="startDate" type="date"></div>
+     <div><label>Rotation End Date</label><input name="endDate" type="date"></div>
     </div>
-    <div class="grid">
-      ${stat("Assigned",db.assignments.length)}
-      ${stat("Completed",db.assignments.filter(completed).length)}
-      ${stat("Pending",db.assignments.filter(a => !completed(a)).length)}
+    <div id="targetArea"></div>
+    <div class="section-label">3. Select Students</div>
+    <p class="muted">Search by name or Student ID. Only students in the selected year are shown.</p>
+    <input id="studentSearch" placeholder="Search student name or ID...">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin:14px 0">
+     <label style="display:flex;align-items:center;gap:8px;margin:0">
+      <input type="checkbox" id="selectAll"> Select All Displayed
+     </label>
+     <span class="pill"><span id="selectedCount">0</span> selected</span>
     </div>
-    ${card(`
-      <h2>Completion Report</h2>
-      <button class="btn" id="completionExport">Export Completion CSV</button>
-      ${table(["Student","Year","Rotation","Form","Status"],
-        db.assignments.map(a => [
-          esc(db.students.find(s => s.id === a.studentId)?.name || a.studentId),
-          esc(a.year),esc(a.rotation),esc(TYPES[a.type]),
-          completed(a) ? "Completed" : "Pending"
-        ])
-      )}
-    `)}
-    ${card(`
-      <h2>Submitted Responses — UGME Only</h2>
-      <button class="btn" id="responseExport">Export Responses CSV</button>
-      ${table(["Student ID","Form","Rotation","Ratings","Comments"],
-        db.responses.map(r => [
-          esc(r.studentId),esc(TYPES[r.type]),esc(r.rotation),
-          esc(r.ratings.join(", ")),esc(r.comments)
-        ])
-      )}
-    `)}
-  `;
+    <div class="checks" id="studentChoices"></div>
+   </form>
+  </section>
 
-  $("completionExport").onclick = () => downloadCSV("completion-report.csv", [
-    ["Student ID","Year","Rotation","Form","Status"],
-    ...db.assignments.map(a => [
-      a.studentId,a.year,a.rotation,TYPES[a.type],
-      completed(a) ? "Completed" : "Pending"
-    ])
-  ]);
+  <section class="card">
+   <h2>Assignment Summary</h2>
+   <p class="muted">Review the selections before assigning.</p>
+   <div class="summary">
+    <div class="summary-line"><span>Academic Year</span><strong id="sumYear">—</strong></div>
+    <div class="summary-line"><span>Rotation</span><strong id="sumRotation">—</strong></div>
+    <div class="summary-line"><span>Evaluation Form</span><strong id="sumType">—</strong></div>
+    <div class="summary-line"><span>Faculty Selected</span><strong id="sumFaculty">0</strong></div>
+    <div class="summary-line"><span>Students Selected</span><strong id="sumStudents">0</strong></div>
+    <hr style="border:0;border-top:1px solid #d6e8de">
+    <p class="muted">Total Evaluation Assignments</p>
+    <div class="metric" id="sumTotal">0</div>
+   </div>
+   <button class="btn" id="assignButton" style="width:100%;margin-top:18px">Review & Assign</button>
+   <p class="muted">Each selected student receives a separate evaluation for each selected faculty member.</p>
+  </section>
+ </div>
+ ${card(`
+ <h2>Evaluation Completion Status</h2>
+ ${table(["Student","Year","Rotation","Form","Faculty / Activity","Status"],
+ db.assignments.map(a=>[
+  esc(db.students.find(s=>s.id===a.studentId)?.name||a.studentId),
+  esc(a.year),esc(a.rotation),esc(TYPES[a.type]),
+  esc(a.facultyName||a.activity||"—"),
+  done(a)?"Completed":"Pending"
+ ]))}
+ `)}
+ `;
 
-  $("responseExport").onclick = () => downloadCSV("evaluation-responses.csv", [
-    ["Student ID","Year","Rotation","Form","Faculty","Activity","Ratings","Comments"],
-    ...db.responses.map(r => [
-      r.studentId,r.year,r.rotation,TYPES[r.type],
-      r.facultyName,r.activity,r.ratings.join("|"),r.comments
-    ])
-  ]);
+ const selected=new Set();
+
+ function eligible(){
+  const year=$("assignYear").value;
+  const q=$("studentSearch").value.trim().toLowerCase();
+  return db.students.filter(s=>s.year===year&&
+   (!q||s.name.toLowerCase().includes(q)||s.id.toLowerCase().includes(q)));
+ }
+ function refreshRotations(){
+  $("assignRotation").innerHTML=opts(db.rotations[$("assignYear").value]||[]);
+  refreshTarget();
+ }
+ function refreshTarget(){
+  const type=$("assignType").value;
+  const year=$("assignYear").value;
+  const rotation=$("assignRotation").value;
+  if(type==="faculty"){
+   const faculty=db.faculty.filter(f=>mapped(f,year,rotation));
+   $("targetArea").innerHTML=`
+    <div class="section-label">2. Select Faculty to Evaluate</div>
+    <p class="muted">Faculty mapped to ${esc(year)} — ${esc(rotation)}</p>
+    <div class="checks">
+     ${faculty.length?faculty.map(f=>`
+      <label class="check-row">
+       <input type="checkbox" class="facultyCheck" value="${esc(f.id)}">
+       <span><strong>${esc(f.name)}</strong><small>${esc(f.department)}</small></span>
+      </label>
+     `).join(""):`<p class="muted" style="padding:12px">No faculty mapped to this rotation. Add them in Faculty Directory.</p>`}
+    </div>`;
+   document.querySelectorAll(".facultyCheck").forEach(b=>b.onchange=updateSummary);
+  }else if(type==="teaching"||type==="cbil"){
+   $("targetArea").innerHTML=`
+    <div class="section-label">2. Session Details</div>
+    <label>${type==="cbil"?"Complete CBIL Session Title":"Teaching Activity / Session Title"}</label>
+    <input name="activity" id="activityTitle" required placeholder="Enter complete session title">
+   `;
+  }else{
+   $("targetArea").innerHTML=`
+    <div class="section-label">2. Rotation Evaluation</div>
+    <p class="muted">Students will evaluate the selected rotation.</p>
+   `;
+  }
+  updateSummary();
+ }
+ function refreshStudents(){
+  $("studentChoices").innerHTML=eligible().length?
+   eligible().map(s=>`
+    <label class="check-row">
+     <input type="checkbox" class="studentCheck" value="${esc(s.id)}" ${selected.has(s.id)?"checked":""}>
+     <span><strong>${esc(s.name)}</strong><small>Student ID: ${esc(s.id)}</small></span>
+    </label>
+   `).join(""):`<p class="muted" style="padding:12px">No matching students found.</p>`;
+  document.querySelectorAll(".studentCheck").forEach(b=>b.onchange=()=>{
+   b.checked?selected.add(b.value):selected.delete(b.value);
+   updateSummary();
+  });
+  updateSummary();
+ }
+ function updateSummary(){
+  const type=$("assignType").value;
+  const facultyCount=type==="faculty"?
+   document.querySelectorAll(".facultyCheck:checked").length:0;
+  $("sumYear").textContent=$("assignYear").value;
+  $("sumRotation").textContent=$("assignRotation").value||"—";
+  $("sumType").textContent=TYPES[type];
+  $("sumFaculty").textContent=facultyCount;
+  $("sumStudents").textContent=selected.size;
+  $("sumTotal").textContent=selected.size*(type==="faculty"?facultyCount:1);
+  $("selectedCount").textContent=selected.size;
+  const visible=eligible();
+  $("selectAll").checked=visible.length>0&&visible.every(s=>selected.has(s.id));
+ }
+ $("assignYear").onchange=()=>{
+  selected.clear();refreshRotations();refreshStudents();
+ };
+ $("assignRotation").onchange=refreshTarget;
+ $("assignType").onchange=refreshTarget;
+ $("studentSearch").oninput=refreshStudents;
+ $("selectAll").onchange=e=>{
+  eligible().forEach(s=>e.target.checked?selected.add(s.id):selected.delete(s.id));
+  refreshStudents();
+ };
+ $("assignButton").onclick=()=>$("assignForm").requestSubmit();
+ $("assignForm").onsubmit=e=>{
+  e.preventDefault();
+  if(!$("assignForm").reportValidity())return;
+  const d=new FormData(e.target);
+  const year=d.get("year"),rotation=d.get("rotation"),type=d.get("type");
+  const rotationNo=String(d.get("rotationNo")||"");
+  const startDate=String(d.get("startDate")||"");
+  const endDate=String(d.get("endDate")||"");
+  const activity=String(d.get("activity")||"").trim();
+
+  if(!selected.size)return alert("Select at least one student.");
+  if(startDate&&endDate&&endDate<startDate)return alert("End date cannot be before start date.");
+
+  const facultyIds=type==="faculty"?
+   [...document.querySelectorAll(".facultyCheck:checked")].map(b=>b.value):[null];
+  if(!facultyIds.length)return alert("Select at least one faculty member.");
+
+  const count=selected.size*facultyIds.length;
+  if(!confirm(`Review assignment:\n${selected.size} students\n${facultyIds.length} evaluation target(s)\n${count} total assignments\n\nContinue?`))return;
+
+  let added=0;
+  for(const studentId of selected){
+   for(const facultyId of facultyIds){
+    const f=facultyId?db.faculty.find(x=>x.id===facultyId):null;
+    if(type==="faculty"&&(!f||!mapped(f,year,rotation)))continue;
+    const duplicate=db.assignments.some(a=>
+     a.studentId===studentId&&a.year===year&&a.rotation===rotation&&
+     a.rotationNo===rotationNo&&a.type===type&&
+     (type==="faculty"?a.facultyId===facultyId:
+      type==="rotation"||a.activity===activity)
+    );
+    if(duplicate)continue;
+    db.assignments.push({
+     id:uid(),studentId,year,rotation,rotationNo,type,
+     facultyId:facultyId||"",facultyName:f?.name||"",
+     activity,startDate,endDate
+    });
+    added++;
+   }
+  }
+  save();
+  alert(`${added} assignments created. Duplicates skipped.`);
+  renderDepartment();
+ };
+ refreshRotations();
+ refreshStudents();
 }
 
-/* INITIALIZE */
+/* STUDENT QUESTIONNAIRES */
 
-document.querySelectorAll(".nav").forEach(button =>
-  button.addEventListener("click", () => render(button.dataset.page))
+function openEvaluation(id){
+ const a=db.assignments.find(x=>x.id===id);
+ if(!a||done(a))return alert("Evaluation unavailable.");
+ if(a.studentId!==currentStudent)return alert("This is not the selected demo student's assignment.");
+
+ const form=structuredClone(db.forms[a.type]);
+ const questions=form.sections.flatMap(s=>s.questions);
+ $("heading").textContent=TYPES[a.type];
+ $("subtitle").textContent=a.year+" · "+a.rotation;
+
+ $("content").innerHTML=card(`
+ <button class="btn secondary" onclick="render('student')">← Back to Student Dashboard</button>
+ <h2>${esc(TYPES[a.type])}</h2>
+ <p class="muted">
+ ${esc(a.year)} · ${esc(a.rotation)}
+ ${a.facultyName?" · "+esc(a.facultyName):""}
+ ${a.activity?" · "+esc(a.activity):""}
+ </p>
+ <form id="evaluationForm">
+ ${form.sections.map((section,si)=>`
+  <h3>${esc(section.title)}</h3>
+  ${section.questions.map((q,qi)=>{
+   const index=form.sections.slice(0,si).reduce((n,s)=>n+s.questions.length,0)+qi;
+   return `<div class="rating-row">
+    <label>${index+1}. ${esc(q)}</label>
+    <div class="rating-options">
+     ${form.values.map((v,i)=>`
+      <label class="rating-option">
+       <input type="radio" name="q${index}" value="${v}" required>
+       ${v} — ${esc(form.scale[i])}
+      </label>
+     `).join("")}
+    </div>
+   </div>`;
+  }).join("")}
+ `).join("")}
+ ${form.comments.map((c,i)=>`
+  <label>${esc(c)}</label>
+  <textarea name="comment${i}"></textarea>
+ `).join("")}
+ <button class="btn">Submit Evaluation</button>
+ </form>
+ `);
+
+ $("evaluationForm").onsubmit=e=>{
+  e.preventDefault();
+  if(done(a))return alert("Already submitted.");
+  const d=new FormData(e.target);
+  db.responses.push({
+   assignmentId:a.id,studentId:a.studentId,
+   year:a.year,rotation:a.rotation,type:a.type,
+   facultyId:a.facultyId,facultyName:a.facultyName,
+   activity:a.activity,questions,
+   ratings:questions.map((_,i)=>Number(d.get("q"+i))),
+   comments:form.comments.map((label,i)=>({
+    label,text:String(d.get("comment"+i)||"")
+   })),
+   date:new Date().toISOString()
+  });
+  save();alert("Evaluation submitted in this demo.");
+  render("student");
+ };
+}
+
+/* TECHNICAL ADMIN REPORTS */
+
+function renderReports(){
+ $("content").innerHTML=back()+`
+ <div class="notice">
+ Confidential response data is visible here for prototype demonstration.
+ Production access must be enforced by a secure backend.
+ </div>
+ ${card(`
+ <h2>Filter Evaluation Reports</h2>
+ <div class="fields">
+ <div><label>Academic Year</label><select id="reportYear">
+ <option value="">All Years</option>${opts(YEARS)}</select></div>
+ <div><label>Evaluation Form</label><select id="reportType">
+ <option value="">All Forms</option>
+ ${Object.entries(TYPES).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join("")}
+ </select></div>
+ <div><label>Rotation</label><select id="reportRotation"><option value="">All Rotations</option></select></div>
+ <div><label>Status</label><select id="reportStatus">
+ <option value="">All Statuses</option><option value="Completed">Completed</option>
+ <option value="Pending">Pending</option></select></div>
+ </div>
+ `)}
+ <div class="grid" id="reportStats"></div>
+ ${card(`
+ <h2>Completion Report</h2>
+ <button class="btn" id="exportCompletion">Export Completion CSV</button>
+ <div id="completionTable"></div>
+ `)}
+ ${card(`
+ <h2>Detailed Evaluation Responses</h2>
+ <button class="btn" id="exportResponses">Export Detailed Responses CSV</button>
+ <div id="responsesTable"></div>
+ `)}
+ ${card(`
+ <h2>Summary Report</h2>
+ <button class="btn" id="exportSummary">Export Summary CSV</button>
+ <div id="summaryTable"></div>
+ `)}
+ `;
+
+ let filteredAssignments=[],filteredResponses=[],summaryRows=[];
+
+ function refreshRotations(){
+  const year=$("reportYear").value;
+  const rotations=year?db.rotations[year]:
+   [...new Set(YEARS.flatMap(y=>db.rotations[y]))].sort();
+  $("reportRotation").innerHTML=
+   `<option value="">All Rotations</option>`+opts(rotations);
+ }
+ function refresh(){
+  const year=$("reportYear").value,type=$("reportType").value;
+  const rotation=$("reportRotation").value,status=$("reportStatus").value;
+  filteredAssignments=db.assignments.filter(a=>
+   (!year||a.year===year)&&(!type||a.type===type)&&
+   (!rotation||a.rotation===rotation)&&
+   (!status||(done(a)?"Completed":"Pending")===status)
+  );
+  const ids=new Set(filteredAssignments.map(a=>a.id));
+  filteredResponses=db.responses.filter(r=>ids.has(r.assignmentId));
+
+  $("reportStats").innerHTML=
+   stat("Assigned",filteredAssignments.length)+
+   stat("Completed",filteredAssignments.filter(done).length)+
+   stat("Pending",filteredAssignments.filter(a=>!done(a)).length);
+
+  $("completionTable").innerHTML=table(
+   ["Student ID","Year","Rotation","Form","Faculty / Activity","Status"],
+   filteredAssignments.map(a=>[
+    esc(a.studentId),esc(a.year),esc(a.rotation),esc(TYPES[a.type]),
+    esc(a.facultyName||a.activity||"—"),done(a)?"Completed":"Pending"
+   ])
+  );
+
+  $("responsesTable").innerHTML=table(
+   ["Form","Year","Rotation","Faculty / Activity","Ratings","Comments"],
+   filteredResponses.map(r=>[
+    esc(TYPES[r.type]),esc(r.year),esc(r.rotation),
+    esc(r.facultyName||r.activity||"—"),
+    esc(r.ratings.join(", ")),
+    esc(r.comments.map(c=>c.text).filter(Boolean).join(" | "))
+   ])
+  );
+
+  const groups=new Map();
+  for(const r of filteredResponses){
+   const key=[r.type,r.year,r.rotation,r.facultyId||r.facultyName||r.activity||""].join("||");
+   if(!groups.has(key))groups.set(key,{
+    type:r.type,year:r.year,rotation:r.rotation,
+    target:r.facultyName||r.activity||"—",count:0,ratings:[]
+   });
+   const g=groups.get(key);
+   g.count++;
+   g.ratings.push(...r.ratings.filter(Number.isFinite));
+  }
+  summaryRows=[...groups.values()].map(g=>({
+   ...g,mean:g.ratings.length?
+    (g.ratings.reduce((a,b)=>a+b,0)/g.ratings.length).toFixed(2):""
+  }));
+  $("summaryTable").innerHTML=table(
+   ["Form","Year","Rotation","Faculty / Activity","Responses","Mean Rating"],
+   summaryRows.map(g=>[
+    esc(TYPES[g.type]),esc(g.year),esc(g.rotation),
+    esc(g.target),g.count,esc(g.mean)
+   ])
+  );
+ }
+
+ $("reportYear").onchange=()=>{refreshRotations();refresh()};
+ $("reportType").onchange=refresh;
+ $("reportRotation").onchange=refresh;
+ $("reportStatus").onchange=refresh;
+
+ $("exportCompletion").onclick=()=>downloadCSV("ugme-completion.csv",[
+  ["Student ID","Year","Rotation","Form","Faculty / Activity","Status"],
+  ...filteredAssignments.map(a=>[
+   a.studentId,a.year,a.rotation,TYPES[a.type],
+   a.facultyName||a.activity||"",done(a)?"Completed":"Pending"
+  ])
+ ]);
+ $("exportResponses").onclick=()=>{
+  const rows=[["Student ID","Year","Rotation","Form","Faculty","Activity",
+   "Question","Rating","Comment Field","Comment","Submitted At"]];
+  for(const r of filteredResponses){
+   r.questions.forEach((q,i)=>rows.push([
+    r.studentId,r.year,r.rotation,TYPES[r.type],
+    r.facultyName,r.activity,q,r.ratings[i],"","",r.date
+   ]));
+   r.comments.forEach(c=>rows.push([
+    r.studentId,r.year,r.rotation,TYPES[r.type],
+    r.facultyName,r.activity,"","",""+c.label,c.text,r.date
+   ]));
+  }
+  downloadCSV("ugme-detailed-responses.csv",rows);
+ };
+ $("exportSummary").onclick=()=>downloadCSV("ugme-summary.csv",[
+  ["Form","Year","Rotation","Faculty / Activity","Response Count","Mean Rating"],
+  ...summaryRows.map(g=>[
+   TYPES[g.type],g.year,g.rotation,g.target,g.count,g.mean
+  ])
+ ]);
+
+ refreshRotations();refresh();
+}
+
+/* START */
+
+document.querySelectorAll(".nav").forEach(b=>
+ b.addEventListener("click",()=>render(b.dataset.page))
 );
-
 render("student");
 </script>
 </body>
