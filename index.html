@@ -5,14 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UGME Student Evaluation Portal</title>
+
 <style>
-:root {
+:root{
   --green:#087f6b;
   --dark:#103f35;
-  --light:#f1f8f5;
-  --border:#dce9e2;
   --text:#193d33;
   --muted:#71857e;
+  --border:#dce9e2;
+  --sage:#e7f3ec;
+  --sage-light:#f7fbf8;
 }
 *{box-sizing:border-box}
 body{
@@ -30,8 +32,18 @@ body{
   color:white;
   padding:26px 15px;
 }
-.brand{font-size:25px;font-weight:800;margin:5px 10px 35px}
-.brand small{display:block;font-size:12px;font-weight:400;color:#b5d8ca;margin-top:8px}
+.brand{
+  font-size:25px;
+  font-weight:800;
+  margin:5px 10px 35px;
+}
+.brand small{
+  display:block;
+  font-size:12px;
+  font-weight:400;
+  color:#b5d8ca;
+  margin-top:8px;
+}
 .nav{
   width:100%;
   display:block;
@@ -46,14 +58,35 @@ body{
   font-size:14px;
 }
 .nav:hover,.nav.active{background:#286b5c}
-.sidebar-note{font-size:11px;color:#bdd6cd;margin:40px 10px;line-height:1.7}
-main{flex:1;min-width:0;padding:28px;max-width:1650px}
+.sidebar-note{
+  font-size:11px;
+  color:#bdd6cd;
+  margin:40px 10px;
+  line-height:1.7;
+}
+main{
+  flex:1;
+  min-width:0;
+  padding:28px;
+  max-width:1650px;
+}
 h1{font-size:27px;margin:7px 0}
 h2{font-size:19px;margin:0 0 14px}
 h3{font-size:15px;margin:0 0 10px}
 p{line-height:1.6}
-.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:25px;gap:15px}
-.eyebrow{font-size:11px;letter-spacing:1.3px;font-weight:bold;color:#638579}
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+  gap:15px;
+}
+.eyebrow{
+  font-size:11px;
+  letter-spacing:1.3px;
+  font-weight:bold;
+  color:#638579;
+}
 .muted{font-size:13px;color:var(--muted)}
 .card{
   background:white;
@@ -68,7 +101,12 @@ p{line-height:1.6}
   grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
   gap:14px;
 }
-label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+label{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  margin:12px 0 6px;
+}
 input,select,textarea{
   width:100%;
   padding:11px;
@@ -78,8 +116,16 @@ input,select,textarea{
   color:var(--text);
   background:white;
 }
-input:focus,select:focus,textarea:focus{outline:2px solid #9ed9c8;outline-offset:1px}
-input[type=checkbox]{width:18px;height:18px;accent-color:var(--green);cursor:pointer}
+input:focus,select:focus,textarea:focus{
+  outline:2px solid #9ed9c8;
+  outline-offset:1px;
+}
+input[type=checkbox]{
+  width:18px;
+  height:18px;
+  accent-color:var(--green);
+  cursor:pointer;
+}
 textarea{min-height:85px}
 .btn{
   border:0;
@@ -113,14 +159,10 @@ textarea{min-height:85px}
   font-size:13px;
   margin-bottom:18px;
 }
-.metric{font-size:29px;font-weight:800;margin-top:8px}
-.section-label{
-  color:#638579;
-  font-size:12px;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  font-weight:700;
-  margin:24px 0 12px;
+.metric{
+  font-size:29px;
+  font-weight:800;
+  margin-top:8px;
 }
 .tool-card{
   padding:23px;
@@ -134,14 +176,72 @@ textarea{min-height:85px}
 }
 .tool-card:hover{background:#dcefe8}
 .tablewrap{overflow:auto}
-table{width:100%;border-collapse:collapse;font-size:13px}
-th,td{padding:12px;border-bottom:1px solid #e8efeb;text-align:left;vertical-align:top}
+table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:13px;
+}
+th,td{
+  padding:12px;
+  border-bottom:1px solid #e8efeb;
+  text-align:left;
+  vertical-align:top;
+}
 th{background:#f4f9f6;color:#426e61}
-.checks{max-height:240px;overflow:auto;border:1px solid var(--border);border-radius:10px}
-.check-row{display:flex;align-items:center;gap:12px;padding:12px;margin:0;border-bottom:1px solid #edf2ef;cursor:pointer;font-weight:400}
-.check-row:hover{background:#f1f8f5}
+.checks{
+  max-height:240px;
+  overflow:auto;
+  border:1px solid var(--border);
+  border-radius:10px;
+}
+.check-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  margin:0;
+  border-bottom:1px solid #edf2ef;
+  cursor:pointer;
+  font-weight:400;
+}
+.check-row:hover{background:#e5f3e9}
 .check-row strong{display:block;font-size:14px}
-.check-row small{display:block;color:var(--muted);margin-top:4px}
+.check-row small{
+  display:block;
+  color:var(--muted);
+  margin-top:4px;
+}
+
+/* LIGHT GREEN SECTION STYLING */
+
+#assignForm{
+  background:var(--sage-light);
+  border:1px solid #e0eee5;
+  border-radius:14px;
+  padding:22px;
+}
+.section-label{
+  background:var(--sage);
+  color:#176452;
+  padding:12px 16px;
+  border-left:4px solid #4b9b7c;
+  border-radius:8px;
+  font-size:12px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  font-weight:700;
+  margin:24px 0 18px;
+}
+#targetArea .checks{
+  background:#f2f9f4;
+  border:1px solid #d7e9dd;
+  border-radius:12px;
+}
+#targetArea .check-row{background:#f2f9f4}
+#targetArea .check-row:hover{background:#e5f3e9}
+
+/* STUDENT SELECTION PANELS */
+
 .student-panels{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -149,7 +249,7 @@ th{background:#f4f9f6;color:#426e61}
   margin-top:16px;
 }
 .student-panel{
-  border:1px solid var(--border);
+  border:1px solid #d5e7dc;
   border-radius:13px;
   overflow:hidden;
   background:white;
@@ -157,8 +257,8 @@ th{background:#f4f9f6;color:#426e61}
 }
 .student-panel-head{
   padding:16px;
-  background:#f6faf8;
-  border-bottom:1px solid var(--border);
+  background:#eaf5ee;
+  border-bottom:1px solid #d5e7dc;
 }
 .student-panel-head h3{margin:0 0 6px}
 .student-panel-body{
@@ -179,8 +279,11 @@ th{background:#f4f9f6;color:#426e61}
   margin:0;
   font-weight:400;
 }
-.student-row:hover{background:#f1f8f5}
-.student-row.selected{background:#eaf7f0}
+.student-row:hover{background:#f0f8f2}
+.student-row.selected{
+  background:#e4f3e9;
+  border-left:3px solid #4b9b7c;
+}
 .avatar{
   width:39px;
   height:39px;
@@ -195,8 +298,15 @@ th{background:#f4f9f6;color:#426e61}
   flex-shrink:0;
 }
 .student-details{flex:1;min-width:0}
-.student-details strong{display:block;font-size:13px}
-.student-details small{display:block;color:var(--muted);margin-top:5px}
+.student-details strong{
+  display:block;
+  font-size:13px;
+}
+.student-details small{
+  display:block;
+  color:var(--muted);
+  margin-top:5px;
+}
 .selected-header{
   display:flex;
   justify-content:space-between;
@@ -231,8 +341,15 @@ th{background:#f4f9f6;color:#426e61}
   padding:9px 0;
   font-size:13px;
 }
-.rating-row{padding:16px 0;border-bottom:1px solid #e9f0eb}
-.rating-options{display:flex;flex-wrap:wrap;gap:8px}
+.rating-row{
+  padding:16px 0;
+  border-bottom:1px solid #e9f0eb;
+}
+.rating-options{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
 .rating-option{
   display:inline-flex;
   align-items:center;
@@ -246,26 +363,29 @@ th{background:#f4f9f6;color:#426e61}
   margin:0;
 }
 .rating-option input{width:auto}
-@media(max-width:1050px){.student-panels{grid-template-columns:1fr}}
+@media(max-width:1050px){
+  .student-panels{grid-template-columns:1fr}
+}
 @media(max-width:750px){
   body{display:block}
   .sidebar{width:100%}
   main{padding:16px}
   .header{display:block}
   .student-panel-body{height:270px}
+  #assignForm{padding:14px}
 }
 </style>
 </head>
-<body>
 
+<body>
 <aside class="sidebar">
   <div class="brand">
     UGME <span style="color:#8ddbc7">Portal</span>
     <small>Student Evaluation Management</small>
   </div>
-  <button class="nav active" data-page="student"> Student Portal</button>
-  <button class="nav" data-page="department"> Department Admin</button>
-  <button class="nav" data-page="technical"> UGME Technical Admin</button>
+  <button class="nav active" data-page="student">🎓 Student Portal</button>
+  <button class="nav" data-page="department">📋 Department Admin</button>
+  <button class="nav" data-page="technical">⚙ UGME Technical Admin</button>
   <div class="sidebar-note">
     PROTOTYPE ONLY<br>
     Fictional records and browser-local data.<br>
@@ -961,7 +1081,7 @@ function renderDepartment(){
               <span class="muted">Search and select students</span>
             </div>
             <div class="student-toolbar">
-              <input id="studentSearch" placeholder="🔎 Search name or Student ID">
+              <input id="studentSearch" placeholder="Search name or Student ID">
               <label style="display:flex;align-items:center;gap:9px;margin-top:12px">
                 <input type="checkbox" id="selectAll">
                 Select All Displayed
